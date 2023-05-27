@@ -19,10 +19,12 @@ export class StudentsController {
   @Get()
   async fetchAll(@Res() response) {
     const students = await this.studentsService.readAll();
+
     return response.status(HttpStatus.OK).json({
       success: true,
       result: students,
     });
+    
   }
 
   @Post()
