@@ -8,7 +8,7 @@ import { StudentsService } from 'src/students/students.service';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost:27017/nest'),
+    MongooseModule.forRoot('mongodb://127.0.0.1:27017/nest'),
     MongooseModule.forFeature([{ name: Student.name, schema: StudentSchema }]),
   ],
   controllers: [AppController, StudentsController],
